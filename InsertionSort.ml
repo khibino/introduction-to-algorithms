@@ -2,18 +2,16 @@ open Array
 
 let insertion_sort _A =
   let len = length _A in
-  let _ = 
-    for j = 1 to len - 1 do
-      let key = _A.(j) in
-      let i = ref (j - 1) in
-      let _ = 
-        while !i >= 0 && _A.(!i) > key do
-          _A.(!i + 1) <- _A.(!i);
-          i := !i - 1
-        done
-      in _A.(!i + 1) <- key
-    done
-  in _A
+  for j = 1 to len - 1 do
+    let key = _A.(j) in
+    let i = ref (j - 1) in
+    let _ = 
+      while !i >= 0 && _A.(!i) > key do
+        _A.(!i + 1) <- _A.(!i);
+        i := !i - 1
+      done
+    in _A.(!i + 1) <- key
+  done
 
 
 let print_array _A =
@@ -21,17 +19,17 @@ let print_array _A =
   iter (Printf.printf "%d;") _A;
   print_endline "]"
 
-let test _A =
+let test sort _A =
   print_endline "Input: ";
   print_array _A;
-  ignore (insertion_sort _A);
+  sort _A;
   print_endline "Output: ";
   print_array _A;
   print_newline ()
 
 let _ =
   List.map
-    test
+    (test insertion_sort)
     [[|0|];
      [|5; 2; 4; 6; 1; 3|];
      [|31; 41; 59; 26; 41; 58|]]

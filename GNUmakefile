@@ -10,7 +10,8 @@ ocamlc=ocamlc.opt
 programs = \
 	InsertionSort.byte \
 	MergeSort.byte \
-	MergeSort2.byte
+	MergeSort2.byte \
+	BubbleSort.byte
 
 all: $(programs)
 
