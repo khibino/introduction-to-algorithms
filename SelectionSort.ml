@@ -3,14 +3,14 @@ open Array
 let selection_sort _A =
   let length_A = length _A in
   for i = 0 to length_A - 2
-  do let j' = ref i in
-     let v =  ref _A.(!j') in
+  do let k = ref i in
      for j = i + 1 to length_A - 1
-     do if !v > _A.(j) then (v := _A.(j); j' := j)
+     do if _A.(!k) > _A.(j) then
+         k := j
      done;
      let tmp = _A.(i) in
-     _A.(!j') <- tmp;
-     _A.(i) <- !v
+     _A.(i) <- _A.(!k);
+     _A.(!k) <- tmp
   done
 
 

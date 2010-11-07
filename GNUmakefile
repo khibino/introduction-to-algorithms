@@ -9,6 +9,7 @@ ocamlc=ocamlc.opt
 
 programs = \
 	BitPlus.byte \
+	BinSearch.byte \
 	SelectionSort.byte \
 	LinearSearch.byte \
 	InsertionSort.byte \

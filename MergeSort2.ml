@@ -14,7 +14,6 @@ let merge _A p q r =
   let i = ref 0 in
   let j = ref 0 in
   let k = ref (p - 1) in
-  let _S = ref _L in
   while !i < n_1 && !j < n_2 && !k <= r - 1
   do
     if _L.(!i) <= _R.(!j)
