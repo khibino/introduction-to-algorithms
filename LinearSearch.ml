@@ -7,7 +7,7 @@ let linear_search _A v =
   let i = ref 0 in
   while !i < length_A && _A.(!i) <> v
   do i := !i + 1
-  (* i.content <- i.content + 1 *)
+  (* i.contents <- i.contents + 1 *)
   done;
   if !i < length_A then !i
   else _NIL
