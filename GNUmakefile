@@ -8,6 +8,7 @@ ocamlc=ocamlc.opt
 	$(ocamlc) -g -o $@ $<
 
 programs = \
+	LinearSearch.byte \
 	InsertionSort.byte \
 	MergeSort.byte \
 	MergeSort2.byte \
