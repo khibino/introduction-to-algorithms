@@ -31,23 +31,11 @@ let merge_sort _A =
       merge _A p q r
   in merge_sort _A 1 (length _A)
 
-
-let print_array _A =
-  print_string "[";
-  iter (Printf.printf "%d;") _A;
-  print_endline "]"
-
-let test sort _A =
-  print_endline "Input: ";
-  print_array _A;
-  sort _A;
-  print_endline "Output: ";
-  print_array _A;
-  print_newline ()
+open Show
 
 let _ =
   List.map
-    (test merge_sort)
+    (test_sort merge_sort)
     [[|5; 2; 4; 6; 1; 3|];
      [|31; 41; 59; 26; 41; 58|]]
 

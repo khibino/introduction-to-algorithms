@@ -13,23 +13,11 @@ let insertion_sort _A =
     in _A.(!i + 1) <- key
   done
 
-
-let print_array _A =
-  print_string "[";
-  iter (Printf.printf "%d;") _A;
-  print_endline "]"
-
-let test sort _A =
-  print_endline "Input: ";
-  print_array _A;
-  sort _A;
-  print_endline "Output: ";
-  print_array _A;
-  print_newline ()
+open Show
 
 let _ =
   List.map
-    (test insertion_sort)
+    (test_sort insertion_sort)
     [[|0|];
      [|5; 2; 4; 6; 1; 3|];
      [|31; 41; 59; 26; 41; 58|]]

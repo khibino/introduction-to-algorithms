@@ -13,23 +13,11 @@ let selection_sort _A =
      _A.(!k) <- tmp
   done
 
-
-let print_array _A =
-  print_string "[";
-  iter (Printf.printf "%d;") _A;
-  print_endline "]"
-
-let test sort _A =
-  print_endline "Input: ";
-  print_array _A;
-  sort _A;
-  print_endline "Output: ";
-  print_array _A;
-  print_newline ()
+open Show
 
 let _ =
   List.map
-    (test selection_sort)
+    (test_sort selection_sort)
     [[|0|];
      [|5; 2; 4; 6; 1; 3|];
      [|31; 41; 59; 26; 41; 58|]]

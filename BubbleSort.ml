@@ -11,22 +11,11 @@ let bubble_sort _A =
     done
   done
 
-let print_array _A =
-  print_string "[";
-  iter (Printf.printf "%d;") _A;
-  print_endline "]"
-
-let test sort _A =
-  print_endline "Input: ";
-  print_array _A;
-  sort _A;
-  print_endline "Output: ";
-  print_array _A;
-  print_newline ()
+open Show
 
 let _ =
   List.map
-    (test bubble_sort)
+    (test_sort bubble_sort)
     [[|5; 2; 4; 6; 1; 3|];
      [|31; 41; 59; 26; 41; 58|]]
 
