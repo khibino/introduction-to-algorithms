@@ -18,7 +18,8 @@ programs = \
 	InsertionSort.byte \
 	MergeSort.byte \
 	MergeSort2.byte \
-	BubbleSort.byte
+	BubbleSort.byte \
+	e2_3_7.byte
 
 all: $(programs)
 
