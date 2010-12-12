@@ -1,11 +1,14 @@
 
 ocamlc=ocamlc.opt
 
+libs = \
+	Show.cmo
+
 %.cmo: %.ml
 	$(ocamlc) -g -c $<
 
-%.byte: %.cmo
-	$(ocamlc) -g -o $@ $<
+%.byte: %.cmo $(libs)
+	$(ocamlc) -g -o $@ $(libs) $<
 
 programs = \
 	BitPlus.byte \
@@ -18,6 +21,8 @@ programs = \
 	BubbleSort.byte
 
 all: $(programs)
+
+BinSearch.byte: Show.cmo BinSearch.cmo
 
 clean:
 	rm -f *.byte

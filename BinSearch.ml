@@ -11,6 +11,8 @@ let binary_search _A v =
   let length_A = length _A in
   binary_search 0 length_A
 
-let test () =
-  (binary_search [|1;4;9;16;25|] 16,
-   binary_search [|1;4;9;16;25|] 15)
+open Show
+
+let _ =
+  (test_search binary_search [|1;4;9;16;25|] 16,
+   test_search binary_search [|1;4;9;16;25|] 15)
