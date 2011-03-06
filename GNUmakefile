@@ -2,7 +2,8 @@
 ocamlc=ocamlc.opt
 
 libs = \
-	Show.cmo
+	Show.cmo \
+	ITARandom.cmo
 
 %.cmo: %.ml
 	$(ocamlc) -g -c $<
@@ -19,9 +20,10 @@ programs = \
 	MergeSort.byte \
 	MergeSort2.byte \
 	BubbleSort.byte \
-	e2_3_7.byte
+	e2_3_7.byte \
 
-all: $(programs)
+
+all: $(libs) $(programs)
 
 BinSearch.byte: Show.cmo BinSearch.cmo
 
