@@ -3,7 +3,8 @@ ocamlc=ocamlc.opt
 
 libs = \
 	Show.cmo \
-	ITARandom.cmo
+	ITARandom.cmo \
+	e5_1_2.cmo
 
 %.cmo: %.ml
 	$(ocamlc) -g -c $<
@@ -26,6 +27,8 @@ programs = \
 all: $(libs) $(programs)
 
 BinSearch.byte: Show.cmo BinSearch.cmo
+
+e5_1_2.byte: ITARandom.cmo e5_1_2.cmo
 
 clean:
 	rm -f *.byte
