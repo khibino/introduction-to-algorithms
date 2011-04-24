@@ -30,6 +30,7 @@ type int_gen =
 
 let make_int : int -> int_gen = fun n ->
   (* 呼ぶ度に偏りが変わる *)
+  (* 偏りの周期が短いのが問題であるかどうか *)
 
   let n64 = Int64.of_int n in
   let msb = Bit.msb n in
