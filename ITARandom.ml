@@ -9,8 +9,8 @@ let random a b = Random.int (b + 1 - a) + a
 
 let biased_random p =
   let v = R.float 1. in
-  if v < p then 0
-  else          1
+  if v < p then 1
+  else          0
 
 let testAB a b  =
   let rec t n =

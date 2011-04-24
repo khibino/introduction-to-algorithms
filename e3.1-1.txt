@@ -1,0 +1,8 @@
+max (f(n), g(n)) = Ω(f(n))
+max (f(n), g(n)) = Ω(g(n))
+
+2 * max (f(n), g(n)) = Ω(f(n)) + Ω(g(n)) = Ω(f(n) + g(n))
+
+max (f(n), g(n)) = Ω(f(n) + g(n)) / 2
+
+max (f(n), g(n)) = Ο(f(n) + g(n))

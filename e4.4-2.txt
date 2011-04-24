@@ -1,0 +1,33 @@
+
+a^j (n/b^j)^(log_b a) (lg (n/b^j))^k
+
+a^j a^(log_b (n/b^j)) a^(k * log_a (lg (n/b^j)))
+
+j + log_b (n/b^j) + k * log_a (lg (n/b^j))
+
+j + log_b n - (j * log_b b) + k * log_a (lg n - j * lg b)
+
+log_b n + k * log_a (lg n - j * lg b)
+
+a^
+
+a^(log_b n) *  Σ (lg n - j * lg b)^k
+
+Σ (lg n - j * lg b)^k -> Σ (lg n)^k
+
+(lg n)^k * log_b n
+
+
+Σ (lg n - m * lg b + j * lg b)^k
+
+a^(log_b n) * (lg n)^(k+1) ....
+n^(log_b a) * (lg n)^(k+1) ....
+
+c^log_b a
+
+b^(log_b c * log_b a)
+
+lg b = log_a b *  lg a
+
+
+lg (n/b^j) = log_a (n/b^j) * lg a

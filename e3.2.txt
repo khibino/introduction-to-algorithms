@@ -1,0 +1,27 @@
+
+3.2-4
+
+ceiling(lg n) = m とする
+
+スターリングの公式から
+lg (m!) = (1 + lg π) 2 + lg m / 2 + m * lg m - m * lg e + lg (1 + Θ(1/n)) 
+
+多項式を n^i とすれば
+
+lg (n^i) = i * lg n
+
+m = ceiling(lg n) >= lg n
+
+lg (m!) の最も高階の項は m * lg m でしかも単調増加であるので
+
+m * lg m >= lg n * lg lg n >= lg n * i  (n が十分に大きいとき)
+
+
+3.2-5
+
+もし lg* n = i だとすれば
+
+lg (lg* n) = lg i
+lg* (lg n) = i - 1
+
+なので lg* (lg n) の方が大きい
