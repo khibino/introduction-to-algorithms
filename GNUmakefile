@@ -5,7 +5,9 @@ objs = \
 	Show.cmo \
 	ITARandom.cmo \
 	Bit.cmo \
-	e5_1_2.cmo
+	e5_1_2.cmo \
+	Heap.cmo \
+	TestHeap.cmo
 
 lib_cmas =
 
@@ -24,7 +26,7 @@ programs = \
 	MergeSort.byte \
 	MergeSort2.byte \
 	BubbleSort.byte \
-	e2_3_7.byte \
+	e2_3_7.byte
 
 
 all: $(objs) $(programs)
