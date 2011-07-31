@@ -11,3 +11,8 @@ let t6_3_1 () =
   let h = heap [| 5; 3; 17; 10; 84; 19; 6; 22; 9 |] in
   build_max_heap h;
   h
+
+let t6_4_1 () =
+  let h = heap [| 5; 13; 2; 25; 7; 17; 20; 8; 4 |] in
+  heap_sort h;
+  h

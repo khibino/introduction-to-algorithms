@@ -58,10 +58,21 @@ let rec max_heapify _A i =
     max_heapify _A !largest
   end
 
-let rec build_max_heap _A =
+let build_max_heap _A =
   _A.heap_size <- _A.length;
   for i = _A.length / 2 downto 1
   do
     max_heapify _A i;
+    Show.print_array _A.store
+  done
+
+let heap_sort _A =
+  build_max_heap _A;
+  for i = _A.length downto 2
+  do
+    (_A, 1) <--> (_A, i);
+    _A.heap_size <- _A.heap_size - 1;
+    max_heapify _A 1;
+    Printf.printf "heap_size = %d, " _A.heap_size;
     Show.print_array _A.store
   done
