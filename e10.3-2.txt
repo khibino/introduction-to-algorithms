@@ -1,0 +1,1 @@
+FREE-OBJECT は free list の先頭にそのオブジェクトを追加 (cons) しているだけ。

@@ -1,0 +1,6 @@
+
+REVERSE(S,T)
+  while NOT (STACK-EMPTY S)
+    PUSH(T, POP(S))
+
+ENQUEUE(Q {S, T} , x)

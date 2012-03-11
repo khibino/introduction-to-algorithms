@@ -1,0 +1,11 @@
+
+n k - n lg k = n * (k - (1 / log 2) log k)
+
+n - n  / (log 2 * k) = 0
+1/4 - 1 / (log 2 * k) = 0
+
+log 2 * k / 4 = 1
+
+k = 4 / log 2
+
+

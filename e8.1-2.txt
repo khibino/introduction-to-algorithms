@@ -1,0 +1,17 @@
+
+x = e^y
+
+dx/dy = e^y
+
+(x log x - x)' = log x
+
+lg x       = log x / log 2 
+lg (x - 1) = log (x - 1) / log 2
+
+x log x - x
+(x - 1) log (x - 1) - x + 1
+
+  (n + 1) log (n + 1) - (n + 1) - (-1)
+= (n + 1) log (n + 1) - n
+
+  n log n - (n + 1) + 1 - (0)
